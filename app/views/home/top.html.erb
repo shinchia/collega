@@ -1,0 +1,93 @@
+<div class="tab_wrap">
+  <input id="tab1" type="radio" name="tab_btn" checked>
+  <input id="tab2" type="radio" name="tab_btn">
+  <input id="tab3" type="radio" name="tab_btn">
+
+  <div class="tab_area">
+    <div class ="fix">
+    <label class="tab1_label" for="tab1">IVENT</label>
+    <label class="tab2_label" for="tab2">BLOGS</label>
+    <label class="tab3_label" for="tab3">CONTACT</label>
+  </div>
+  </div>
+  <div class="panel_area">
+    <div id="panel1" class="tab_panel">
+    <div class = "toukou">
+      <div class = "profile">
+        <img src="/images.jpg">
+        <p>営業ができるようになるセミナー</p>
+      </div>
+      <div class = "img">
+        <img src="/397.jpg">
+      </div>
+      <div class = "syousai">
+        <p>営業あいうえ言おうああ</p>
+      </div>
+      </div>
+        <div class = "toukou">
+          <div class = "profile">
+            <img src="/images.jpg">
+            <p>松本さんがイベント情報を追加しました。</p>
+          </div>
+          <div class = "img">
+            <img src="/397.jpg">
+          </div>
+          <div class = "syousai">
+            <p>営業あいうえ言おうああ</p>
+          </div>
+            </div>
+
+      </div>
+
+      <div id="panel2" class="tab_panel">
+      <div class = "toukou">
+        <div class = "profile">
+          <img src="/images.jpg">
+          <p>松本さんがブログを更新しました。</p>
+        </div>
+        <div class = "img">
+          <img src="/397.jpg">
+        </div>
+        <div class = "syousai">
+        </div>
+        </div>
+          <div class = "toukou">
+            <div class = "profile">
+              <img src="/images.jpg">
+              <p>松本さんがブログを更新しました。</p>
+            </div>
+            <div class = "img">
+              <img src="/397.jpg">
+            </div>
+            <div class = "syousai">
+              <p>営業あいうえ言おうああ</p>
+            </div>
+              </div>
+
+        </div>
+        <div id="panel3" class="tab_panel">
+          <h1>New Topic</h1>
+          <div class = "text_field">
+          <%= form_for @newTopic, :url => {:action => 'create'} do |f| %>
+            <%= f.text_field :title, :size=>"40x20" %>
+            <%= f.submit %>
+          <% end %>
+        </div>
+          <% @topics.each do |topic| %>
+          <div class = "toukou">
+          <div class = "profile">
+            <img src="/images.jpg">
+            <p>松本さんが<br>Topicを作成しました。</p>
+          </div>
+          <div class = "syousai">
+            <h2>
+              <%= link_to topic.title, topics_show_path(topic.id),:style=>"color:gray;""text-decoration: none;"%>
+              <p><%= link_to '削除', topic_delete_path(topic.id), method: :delete, data: {confirm: "削除してもよろしいですか？"},:style=>"color:gray;""text-decoration: none;""float:right;" %></p>
+            </h2>
+          </div>
+          </div>
+          <% end %>
+        </div>
+
+    </div>
+  </div>

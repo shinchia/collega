@@ -1,0 +1,15 @@
+current directory: /Users/matsumtoshintaro/collega/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+/Users/matsumtoshintaro/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20181219-25859-tkxo6i.rb extconf.rb
+creating Makefile
+
+current directory: /Users/matsumtoshintaro/collega/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/matsumtoshintaro/collega/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/matsumtoshintaro/collega/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20181219-25859-1rn7mqe
