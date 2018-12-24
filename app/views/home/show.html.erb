@@ -4,6 +4,7 @@
 <div class = "kakikomi_txt">
   <p>
 <%= post.name %> : <%= post.body %>
+  <p><%= link_to '削除', post_delete_path(post.id), method: :delete, data: {confirm: "削除してもよろしいですか？"},:style=>"color:gray;""text-decoration: none;""float:right;" %></p>
 </p>
 </div>
 <% end %>

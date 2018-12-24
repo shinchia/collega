@@ -212,7 +212,7 @@ header {
 .tab_wrap{width:100%; margin:15% 0 0 0;}
 input[type="radio"]{display:none;}
 .tab_area label{
-  width:32.2%;
+  width:24%;
   margin:0;
    display:inline-block; padding:12px 0;
    color:#999;
@@ -241,14 +241,15 @@ input[type="radio"]{display:none;}
 #tab2:checked ~ .panel_area #panel2{display:block;}
 #tab3:checked ~ .tab_area .tab3_label{background:#fff; color:#C0F0C0;}
 #tab3:checked ~ .panel_area #panel3{display:block;}
-
+#tab4:checked ~ .tab_area .tab4_label{background:#fff; color:#C0F0C0;}
+#tab4:checked ~ .panel_area #panel4{display:block;}
 // kakikomi
 
 .kakikomi{
 	position: fixed;
 	bottom: 0;
 	background-color:white ;
-	width: 100%;
+	width: 97%;
 	text-align: center;
 	color: gray;
 }
