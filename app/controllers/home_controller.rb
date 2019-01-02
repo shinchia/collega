@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   def create
     @topic = Topic.new(params[:topic].permit(:title))
     @topic.save
-    redirect_to home_top_path
+    redirect_to ("/")
   end
   def show
     @topic = Topic.find(params[:id])
@@ -16,6 +16,6 @@ class HomeController < ApplicationController
   def delete
     @topic = Topic.find(params[:id])
     @topic.destroy
-    redirect_to home_top_path
+    redirect_to ("/")
   end
 end
