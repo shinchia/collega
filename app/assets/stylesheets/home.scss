@@ -24,6 +24,11 @@ body{
 
 }
 
+.header img{
+	width: 90px;
+	margin: 0% 0 0 0;
+}
+
 .header h2{
   margin: 0;
 }
@@ -186,6 +191,15 @@ header {
 
 }
 
+.syousai h5{
+	padding: 0% 5% 0 0;
+	text-align:right;
+}
+.syousai h6{
+	padding: 0% 10% 0% 5%;
+	text-align:left;
+}
+
 .syousai li{
   color: gray;
   list-style: none;
@@ -209,21 +223,21 @@ header {
   z-index: 2;
 }
 
-.tab_wrap{width:100%; margin:15% 0 0 0;}
+.tab_wrap{width:100%; margin:0% 0 0 0;}
 input[type="radio"]{display:none;}
 .tab_area label{
+
   width:24%;
   margin:0;
    display:inline-block; padding:12px 0;
-   color:#999;
-   background:#ddd;
+   color:black;
+   background:#EEEEEE;
    text-align:center;
    font-size:13px;
    cursor:pointer;
    transition:ease 0.2s opacity;
    float: left;
    }
-.tab_area label:hover{opacity:0.5;}
 .panel_area{background:#fff;}
 .tab_panel{width:100%; padding:80px 0; display:none;}
 .tab_panel p{font-size:14px; letter-spacing:1px; text-align:center;}
@@ -235,13 +249,13 @@ input[type="radio"]{display:none;}
   text-align: center;
 }
 
-#tab1:checked ~ .tab_area .tab1_label{background:#fff; color:#C0F0C0;}
+#tab1:checked ~ .tab_area .tab1_label{background:#fff; color:#FF66FF;}
 #tab1:checked ~ .panel_area #panel1{display:block;}
-#tab2:checked ~ .tab_area .tab2_label{background:#fff; color:#C0F0C0;}
+#tab2:checked ~ .tab_area .tab2_label{background:#fff; color:#FF66FF;}
 #tab2:checked ~ .panel_area #panel2{display:block;}
-#tab3:checked ~ .tab_area .tab3_label{background:#fff; color:#C0F0C0;}
+#tab3:checked ~ .tab_area .tab3_label{background:#fff; color:#FF66FF;}
 #tab3:checked ~ .panel_area #panel3{display:block;}
-#tab4:checked ~ .tab_area .tab4_label{background:#fff; color:#C0F0C0;}
+#tab4:checked ~ .tab_area .tab4_label{background:#fff; color:#FF66FF;}
 #tab4:checked ~ .panel_area #panel4{display:block;}
 // kakikomi
 
