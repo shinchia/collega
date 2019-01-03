@@ -1,0 +1,6 @@
+<div class = "video_new">
+<p><%= @video.content %></p>
+<video src="<%= "/#{@video.id}.mp4" %>" controls></video>
+<p><%= link_to("編集", "/videos/#{@video.id}/edit") %></p>
+<p><%= link_to("削除", "/videos/#{@video.id}/destroy", {method: "video"}) %></p>
+</div>

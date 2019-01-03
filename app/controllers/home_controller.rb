@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def top
-    @topics = Topic.all
+    @videos = Video.all.order(created_at: :desc)
+    @topics = Topic.all.order(created_at: :desc)
     @newTopic = Topic.new
   end
   def create
