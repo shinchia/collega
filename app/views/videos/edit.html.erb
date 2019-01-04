@@ -1,8 +1,10 @@
 <div class = "video_new">
+  <div class ="edit_zenntai">
   <%= form_tag("/videos/#{@video.id}/update", {multipart: true}) do %>
-  <h5>編集する</h5>
   <textarea name="content"><%= @video.content %></textarea>
+  <input name="sheet" type="file">
   <input name="image" type="file">
   <input type="submit" value="保存">
   <%end%>
+</div>
 </div>

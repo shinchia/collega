@@ -28,7 +28,13 @@ class VideosController < ApplicationController
       @video.image_name = "#{@video.id}.mp4"
       image = params[:image]
       File.binwrite("public/#{@video.image_name}", image.read)
+      else params[:sheet]
+      @video.sheet_name = "#{@video.id}.jpg"
+      sheet = params[:sheet]
+      File.binwrite("public/#{@video.sheet_name}", sheet.read)
     end
+
+
   end
 
   def destroy

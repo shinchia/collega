@@ -3,6 +3,8 @@ class HomeController < ApplicationController
     @videos = Video.all.order(created_at: :desc)
     @topics = Topic.all.order(created_at: :desc)
     @newTopic = Topic.new
+    @video = Video.find_by(params[:id])
+    @video.sheet_name = "#{@video.id}.jpg"
   end
   def create
     @topic = Topic.new(params[:topic].permit(:title))

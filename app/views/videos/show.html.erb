@@ -1,6 +1,13 @@
 <div class = "video_new">
   <p><%= @video.content %></p>
   <video src="<%= "/#{@video.id}.mp4" %>" controls></video>
+</div>
   <h3><%= link_to("編集", "/videos/#{@video.id}/edit") %></h3>
   <h3><%= link_to("削除", "/videos/#{@video.id}/destroy", {method: "video"}) %></h3>
+  <div class ="video_new_show">
+  <p>【講師】松本慎太郎</p>
+  <p>【内容】</p>
+  <p>営業が少しでも不安な方には是非ともおすすめの講座です。是非ともご視聴を！！営業が少しでも不安な方に</p>
+</div>
+
 </div>

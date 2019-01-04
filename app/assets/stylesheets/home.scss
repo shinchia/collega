@@ -8,7 +8,7 @@ ul, li {
 
 @media screen and(max-width: 600px) {
 body{
-  font-family: 'Kaushan Script', cursive;
+
 }
 // header
 .header{
@@ -216,6 +216,16 @@ header {
    z-index: 2;
 
 }
+
+.toukou_zenntai{
+	margin: 0 0 20% 0;
+
+}
+
+.video_toukou{
+
+}
+
 .fix{
   width: 100%;
   position: fixed;
@@ -246,7 +256,18 @@ input[type="radio"]{display:none;}
   color: gray;
 }
 .text_field{
+	padding: 10%;
   text-align: center;
+	position: fixed;
+	bottom: 0;
+	background-color: gray;
+	color: white;
+	z-index: 5;
+}
+
+.text_field h1{
+	color: white;
+	padding: 0%;
 }
 
 #tab1:checked ~ .tab_area .tab1_label{background:#fff; color:#FF66FF;}

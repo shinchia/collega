@@ -68,13 +68,13 @@
 
         </div>
         <div id="panel3" class="tab_panel">
-          <h1>New Topic</h1>
           <div class = "text_field">
           <%= form_for @newTopic, :url => {:action => 'create'} do |f| %>
             <%= f.text_field :title, :size=>"40x20" %>
             <%= f.submit %>
           <% end %>
         </div>
+        <div class = "toukou_zenntai">
           <% @topics.each do |topic| %>
           <div class = "toukou">
           <div class = "profile">
@@ -90,6 +90,7 @@
           </div>
           <% end %>
         </div>
+      </div>
         <div id="panel4" class="tab_panel">
           <% @videos.each do |video| %>
           <div class = "toukou">
@@ -98,12 +99,11 @@
               <p><%= link_to(video.content, "/videos/#{video.id}") %></p>
             </div>
             <div class = "img">
-              <img src="/images.jpg">
+              <img src="<%="/#{video.id}.jpg" %>"></img>
             </div>
 
             <div class = "syousai">
               <h6>営業が少しでも不安な方には是非ともおすすめの講座です。是非ともご視聴を！！営業が少しでも不安な方に</h6>
-              <h5>講師：松本慎太郎</h5>
 
             </div>
 
