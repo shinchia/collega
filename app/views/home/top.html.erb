@@ -99,7 +99,7 @@
               <p><%= link_to(video.content, "/videos/#{video.id}") %></p>
             </div>
             <div class = "img">
-              <img src="<%="/#{video.id}.jpg" %>"></img>
+              <img src="/<%= "#{video.id}"%>.jpg">
             </div>
 
             <div class = "syousai">

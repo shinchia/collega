@@ -21,17 +21,21 @@ class VideosController < ApplicationController
   def update
     @video = Video.find_by(id: params[:id])
     @video.content = params[:content]
-    @video.save
-    redirect_to("/")
+
 
     if params[:image]
       @video.image_name = "#{@video.id}.mp4"
       image = params[:image]
       File.binwrite("public/#{@video.image_name}", image.read)
-      else params[:sheet]
+      redirect_to("/")
+    elsif params[:sheet]
       @video.sheet_name = "#{@video.id}.jpg"
       sheet = params[:sheet]
       File.binwrite("public/#{@video.sheet_name}", sheet.read)
+      redirect_to("/")
+    else
+      @video.save
+      redirect_to("/")
     end
 
 
