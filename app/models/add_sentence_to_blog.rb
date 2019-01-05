@@ -1,0 +1,2 @@
+class AddSentenceToBlog < ApplicationRecord
+end

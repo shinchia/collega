@@ -1,0 +1,2 @@
+class AddSentenceToVideo < ApplicationRecord
+end

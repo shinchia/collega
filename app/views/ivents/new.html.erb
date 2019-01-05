@@ -1,0 +1,14 @@
+<div class = "video_new">
+  <div class ="edit_zenntai">
+    <%= form_tag("/ivents/#{@ivent.id}/create", {multipart: true}) do %>
+  <h5>タイトル</h5>
+  <textarea name="content"></textarea>
+  <h5>要約文</h5>
+  <textarea name="summry"></textarea>
+  <h5>文章</h5>
+  <textarea name="sentence"></textarea>
+  <input type="submit" value="投稿">
+</div>
+<input type="submit" value="投稿">
+</div>
+<%end%>

@@ -1,0 +1,11 @@
+<div class = "video_new">
+  <p><%= @ivent.content %></p>
+  <img src="/ivent_images/<%= "#{@ivent.id}"%>.jpg">
+</div>
+  <h3><%= link_to("編集", "/ivents/#{@ivent.id}/edit") %></h3>
+  <h3><%= link_to("削除", "/ivents/#{@ivent.id}/destroy", {method: "ivent"}) %></h3>
+  <div class ="video_new_show">
+  <p><%= @ivent.sentence %></p>
+</div>
+
+</div>

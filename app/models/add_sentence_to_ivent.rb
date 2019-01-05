@@ -1,0 +1,2 @@
+class AddSentenceToIvent < ApplicationRecord
+end

@@ -1,7 +1,8 @@
-class VideosController < ApplicationController
+class BlogsController < ApplicationController
   def new
     @video = Video.new
   end
+
 
   def show
     @video = Video.find_by(id: params[:id])
@@ -26,17 +27,12 @@ class VideosController < ApplicationController
     @video.sentence = params[:sentence]
 
     if params[:image]
-      @video.image_name = "#{@video.id}.mp4"
-      image = params[:image]
-      File.binwrite("public/video_mp4/#{@video.image_name}", image.read)
-      redirect_to("/")
-    elsif params[:sheet]
-      @video.sheet_name = "#{@video.id}.jpg"
-      sheet = params[:sheet]
-      File.binwrite("public/video_jpg/#{@video.sheet_name}", sheet.read)
+      @ivent.sheet_name = "#{@ivent.id}.jpg"
+      sheet = params[:image]
+      File.binwrite("public/ivent_jpg/#{@ivent.image_name}", image.read)
       redirect_to("/")
     else
-      @video.save
+      @ivent.save
       redirect_to("/")
     end
 

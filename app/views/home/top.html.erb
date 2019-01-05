@@ -14,30 +14,25 @@
   </div>
   <div class="panel_area">
     <div id="panel1" class="tab_panel">
-    <div class = "toukou">
-      <div class = "profile">
-        <img src="/images.jpg">
-        <p>営業ができるようになるセミナー</p>
-      </div>
-      <div class = "img">
-        <img src="/397.jpg">
-      </div>
-      <div class = "syousai">
-        <p>営業あいうえ言おうああ</p>
-      </div>
-      </div>
-        <div class = "toukou">
-          <div class = "profile">
-            <img src="/images.jpg">
-            <p>松本さんがイベント情報を追加しました。</p>
+      <% @ivents.each do |ivent| %>
+      <div class = "toukou">
+        <div class = "profile">
+          <img src="/images.jpg">
+          <p><%= link_to(ivent.content, "/ivents/#{ivent.id}") %></p>
+        </div>
+        <div class = "img">
+          <img src="/ivent_images/<%= "#{ivent.id}"%>.jpg">
+        </div>
+
+        <div class = "syousai">
+          <h4>【どんなイベント？】</h4>
+          <h5><%= ivent.summry%></h5>
+
+
+        </div>
+
           </div>
-          <div class = "img">
-            <img src="/397.jpg">
-          </div>
-          <div class = "syousai">
-            <p>営業あいうえ言おうああ</p>
-          </div>
-            </div>
+          <%end%>
 
       </div>
 
@@ -99,11 +94,13 @@
               <p><%= link_to(video.content, "/videos/#{video.id}") %></p>
             </div>
             <div class = "img">
-              <img src="/<%= "#{video.id}"%>.jpg">
+              <img src="/video_jpg/<%= "#{video.id}"%>.jpg">
             </div>
 
             <div class = "syousai">
-              <h6><%= video.summry%></h6>
+              <h4>【どんな講座？】</h4>
+              <h5><%= video.summry%></h5>
+
 
             </div>
 
