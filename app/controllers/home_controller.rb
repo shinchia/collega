@@ -4,6 +4,7 @@ class HomeController < ApplicationController
     @topics = Topic.all.order(created_at: :desc)
     @ivents = Ivent.all.order(created_at: :desc)
     @blogs = Blog.all.order(created_at: :desc)
+    @users = User.all.order(created_at: :desc)
     @newTopic = Topic.new
   end
   def create

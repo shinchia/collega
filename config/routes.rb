@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  get '/' => 'home#top'
+
+  post "users/:id/update" => "users#update"
+  get "users/:id/edit" => "users#edit"
+  post "users/create" => "users#create"
+  get "users/new" => "users#new"
+  get "users/index" => "users#index"
+  get "users/:id" => "users#show"
 
   get "blogs/new" => "blogs#new"
   post 'blogs/create' => 'blogs#create'
@@ -27,6 +33,7 @@ Rails.application.routes.draw do
   post 'posts/create' => 'post#create', as: :post_create
   delete 'topics/delete/:id' => 'home#delete', as: :topic_delete
   delete 'post/delete/:id' => 'post#delete', as: :post_delete
-  get 'post/top'
+
+  get '/' => 'home#top'
 
 end

@@ -1,0 +1,11 @@
+<div class = "video_new">
+  <div class ="edit_zenntai">
+
+    <img src="/user_images/<%= "#{@user.id}"%>.jpg">
+    <h4>ユーザー名</h4>
+    <h5><%= @user.name %></h5>
+    <h4>メールアドレス</h4>
+    <h5><%= @user.email %></h5>
+    <h5><%= link_to("編集", "/users/#{@user.id}/edit") %></h5>
+  </div>
+</div>
