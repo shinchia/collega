@@ -21,7 +21,9 @@ class VideosController < ApplicationController
   def update
     @video = Video.find_by(id: params[:id])
     @video.content = params[:content]
-
+    @video.summry = params[:summry]
+    @video.teacher = params[:teacher]
+    @video.sentence = params[:sentence]
 
     if params[:image]
       @video.image_name = "#{@video.id}.mp4"
