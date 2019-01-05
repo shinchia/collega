@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   get '/' => 'home#top'
 
+  get "blogs/new" => "blogs#new"
+  post 'blogs/create' => 'blogs#create'
+  get 'blogs/:id' => 'blogs#show'
+  get "blogs/:id/edit" => "blogs#edit"
+  post "blogs/:id/update" => "blogs#update"
+  post "blogs/:id/destroy" => "blogs#destroy"
+
   get "ivents/new" => "ivents#new"
   post 'ivents/create' => 'ivents#create'
   get 'ivents/:id' => 'ivents#show'
@@ -13,9 +20,8 @@ Rails.application.routes.draw do
   post "videos/:id/update" => "videos#update"
   get 'videos/:id' => 'videos#show'
   get "videos/:id/edit" => "videos#edit"
-
-
   post "videos/:id/destroy" => "videos#destroy"
+
   get 'home/show/:id' => 'home#show', as: :topics_show
   post 'home/create' => 'home#create'
   post 'posts/create' => 'post#create', as: :post_create

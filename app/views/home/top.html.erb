@@ -37,29 +37,25 @@
       </div>
 
       <div id="panel2" class="tab_panel">
-      <div class = "toukou">
-        <div class = "profile">
-          <img src="/images.jpg">
-          <p>松本さんがブログを更新しました。</p>
-        </div>
-        <div class = "img">
-          <img src="/397.jpg">
-        </div>
-        <div class = "syousai">
-        </div>
-        </div>
-          <div class = "toukou">
-            <div class = "profile">
-              <img src="/images.jpg">
-              <p>松本さんがブログを更新しました。</p>
+        <% @blogs.each do |blog| %>
+        <div class = "toukou">
+          <div class = "profile">
+            <img src="/images.jpg">
+            <p><%= link_to(blog.content, "/blogs/#{blog.id}") %></p>
+          </div>
+          <div class = "img">
+            <img src="/blog_jpg/<%= "#{blog.id}"%>.jpg">
+          </div>
+
+          <div class = "syousai">
+            <h4>【ひとこと】</h4>
+            <h5><%= blog.summry%></h5>
+
+
+          </div>
+
             </div>
-            <div class = "img">
-              <img src="/397.jpg">
-            </div>
-            <div class = "syousai">
-              <p>営業あいうえ言おうああ</p>
-            </div>
-              </div>
+            <%end%>
 
         </div>
         <div id="panel3" class="tab_panel">

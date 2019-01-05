@@ -1,0 +1,12 @@
+<div class = "video_new">
+
+  <p><%= @blog.content %></p>
+  <img src="/blog_jpg/<%= "#{@blog.id}"%>.jpg">
+</div>
+  <h3><%= link_to("編集", "/blogs/#{@blog.id}/edit") %></h3>
+  <h3><%= link_to("削除", "/blogs/#{@blog.id}/destroy", {method: "blog"}) %></h3>
+  <div class ="video_new_show">
+  <p><%= @blog.sentence %></p>
+</div>
+
+</div>

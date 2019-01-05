@@ -1,38 +1,37 @@
 class BlogsController < ApplicationController
   def new
-    @video = Video.new
+    @blog = Blog.new
   end
 
 
   def show
-    @video = Video.find_by(id: params[:id])
+    @blog = Blog.find_by(id: params[:id])
   end
 
   def create
-    @video = Video.new(content:params[:content])
-    @video.save
+    @blog = Blog.new(content:params[:content])
+    @blog.save
     redirect_to("/")
   end
 
 
   def edit
-    @video = Video.find_by(id: params[:id])
+    @blog = Blog.find_by(id: params[:id])
   end
 
   def update
-    @video = Video.find_by(id: params[:id])
-    @video.content = params[:content]
-    @video.summry = params[:summry]
-    @video.teacher = params[:teacher]
-    @video.sentence = params[:sentence]
+    @blog = Blog.find_by(id: params[:id])
+    @blog.content = params[:content]
+    @blog.summry = params[:summry]
+    @blog.sentence = params[:sentence]
 
     if params[:image]
-      @ivent.sheet_name = "#{@ivent.id}.jpg"
-      sheet = params[:image]
-      File.binwrite("public/ivent_jpg/#{@ivent.image_name}", image.read)
+      @blog.image_name = "#{@blog.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/blog_jpg/#{@blog.image_name}", image.read)
       redirect_to("/")
     else
-      @ivent.save
+      @blog.save
       redirect_to("/")
     end
 
@@ -40,8 +39,8 @@ class BlogsController < ApplicationController
   end
 
   def destroy
-    @video = Video.find_by(id: params[:id])
-    @video.destroy
+    @blog = Blog.find_by(id: params[:id])
+    @blog.destroy
     redirect_to("/")
   end
 end
