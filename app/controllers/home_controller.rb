@@ -3,6 +3,7 @@ class HomeController < ApplicationController
     @videos = Video.all.order(created_at: :desc)
     @topics = Topic.all.order(created_at: :desc)
     @ivents = Ivent.all.order(created_at: :desc)
+    @toukous = Toukou.all.order(created_at: :desc)
     @blogs = Blog.all.order(created_at: :desc)
     @users = User.all.order(created_at: :desc)
     @newTopic = Topic.new

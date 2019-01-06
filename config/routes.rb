@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  get "toukous/new" => "toukous#new"
+  post 'toukous/create' => 'toukous#create'
+  get 'toukous/:id' => 'toukous#show'
+  get "toukous/:id/edit" => "toukous#edit"
+  post "toukous/:id/update" => "toukous#update"
+  post "toukous/:id/destroy" => "toukous#destroy"
+
   get "teachers/login" => "teachers#login"
   post "teachers/:id/update" => "teachers#update"
   get "teachers/:id/edit" => "teachers#edit"

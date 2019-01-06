@@ -1,0 +1,11 @@
+<div class = "video_new">
+  <p><%= @toukou.content %></p>
+  <img src="/toukou_images/<%= "#{@toukou.id}"%>.jpg">
+</div>
+  <h3><%= link_to("編集", "/toukous/#{@toukou.id}/edit") %></h3>
+  <h3><%= link_to("削除", "/toukous/#{@toukou.id}/destroy", {method: "toukou"}) %></h3>
+  <div class ="video_new_show">
+  <p><%= @toukou.sentence %></p>
+</div>
+
+</div>

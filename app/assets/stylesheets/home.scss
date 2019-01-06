@@ -243,7 +243,7 @@ header {
 input[type="radio"]{display:none;}
 .tab_area label{
 
-  width:24%;
+  width:19%;
   margin:0;
    display:inline-block; padding:12px 0;
    color:black;
@@ -276,14 +276,16 @@ input[type="radio"]{display:none;}
 	padding: 0%;
 }
 
-#tab1:checked ~ .tab_area .tab1_label{background:#fff; color:#FF66FF;}
+#tab1:checked ~ .tab_area .tab1_label{background:#fff; color:#FF66FF; font-size: 20px;}
 #tab1:checked ~ .panel_area #panel1{display:block;}
-#tab2:checked ~ .tab_area .tab2_label{background:#fff; color:#FF66FF;}
+#tab2:checked ~ .tab_area .tab2_label{background:#fff; color:#FF66FF;font-size: 20px;}
 #tab2:checked ~ .panel_area #panel2{display:block;}
-#tab3:checked ~ .tab_area .tab3_label{background:#fff; color:#FF66FF;}
+#tab3:checked ~ .tab_area .tab3_label{background:#fff; color:#FF66FF;font-size: 20px;}
 #tab3:checked ~ .panel_area #panel3{display:block;}
-#tab4:checked ~ .tab_area .tab4_label{background:#fff; color:#FF66FF;}
+#tab4:checked ~ .tab_area .tab4_label{background:#fff; color:#FF66FF;font-size: 20px;}
 #tab4:checked ~ .panel_area #panel4{display:block;}
+#tab5:checked ~ .tab_area .tab5_label{background:#fff; color:#FF66FF;font-size: 20px;}
+#tab5:checked ~ .panel_area #panel5{display:block;}
 // kakikomi
 
 .kakikomi{

@@ -12,10 +12,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(name: params[:name], email: params[:email])
+    @user = User.new(name: params[:name], email: params[:email],job: params[:job],sikaku: params[:sikaku],sonota: params[:sonota],hitokoto: params[:hitokoto],)
     # 保存が成功したかどうかで条件分岐をしてください
     if @user.save
-      flash[:notice] = "ユーザー登録が完了しました"
       redirect_to("/users/#{@user.id}")
     else
       render("users/new")
@@ -31,6 +30,10 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @user.name = params[:name]
     @user.email = params[:email]
+    @user.job = params[:job]
+    @user.sikaku = params[:sikaku]
+    @user.sonota = params[:sonota]
+    @user.hitokoto = params[:hitokoto]
 
     # 画像を保存する処理を追加してください
     if params[:image]
