@@ -12,10 +12,8 @@ class TeachersController < ApplicationController
   end
 
   def create
-    @teacher = Teacher.new(name: params[:name], email: params[:email])
-    # 保存が成功したかどうかで条件分岐をしてください
+    @teacher = Teacher.new(name: params[:name], email: params[:email],job: params[:job],sikaku: params[:sikaku],sonota: params[:sonota],hitokoto: params[:hitokoto])
     if @teacher.save
-      flash[:notice] = "ユーザー登録が完了しました"
       redirect_to("/teachers/#{@teacher.id}")
     else
       render("teachers/new")
@@ -31,6 +29,10 @@ class TeachersController < ApplicationController
     @teacher = Teacher.find_by(id: params[:id])
     @teacher.name = params[:name]
     @teacher.email = params[:email]
+    @teacher.job = params[:job]
+    @teacher.sikaku = params[:sikaku]
+    @teacher.sonota = params[:sonota]
+    @teacher.hitokoto = params[:hitokoto]
 
     # 画像を保存する処理を追加してください
     if params[:image]

@@ -2,10 +2,12 @@
   <div class ="edit_zenntai">
 
     <img src="/menber_images/<%= "#{@menber.id}"%>.jpg">
-    <h4>ユーザー名</h4>
-    <h5><%= @menber.name %></h5>
-    <h4>メールアドレス</h4>
-    <h5><%= @menber.email %></h5>
+    <h4>【ユーザー名】<%= @menber.name %></h4>
+    <h4>【メールアドレス】<%= @menber.email %></h4>
+    <h4>【職業】<%= @menber.job %></h4>
+    <h4>【資格等】<%= @menber.sikaku %></h4>
+    <h4>【その他】<%= @menber.sikaku %></h4>
+    <h4>【ひとこと】<%= @menber.sikaku %></h4>
     <h5><%= link_to("編集", "/menbers/#{@menber.id}/edit") %></h5>
   </div>
 </div>

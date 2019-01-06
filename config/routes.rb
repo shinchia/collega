@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get "teachers/new" => "teachers#new"
   get "teachers/index" => "teachers#index"
   get "teachers/:id" => "teachers#show"
+  get "teachers/profile/:id" => "teachers#profile"
 
   get "managers/login" => "managers#login"
   post "managers/:id/update" => "managers#update"

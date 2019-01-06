@@ -1,6 +1,6 @@
 <div class = "video_new">
   <div class ="edit_zenntai">
-    <h4>権限者一覧</h4>
+    <h4>ユーザー一覧</h4>
     <% @managers.each do |manager| %>
 
           <h5><%= link_to(manager.name, "/managers/#{manager.id}") %></h5>

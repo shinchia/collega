@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(name: params[:name], email: params[:email],job: params[:job],sikaku: params[:sikaku],sonota: params[:sonota],hitokoto: params[:hitokoto],)
+    @user = User.new(name: params[:name], email: params[:email],job: params[:job],sikaku: params[:sikaku],sonota: params[:sonota],hitokoto: params[:hitokoto])
     # 保存が成功したかどうかで条件分岐をしてください
     if @user.save
       redirect_to("/users/#{@user.id}")

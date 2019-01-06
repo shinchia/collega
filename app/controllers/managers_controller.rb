@@ -12,7 +12,7 @@ class ManagersController < ApplicationController
   end
 
   def create
-    @manager = Manager.new(name: params[:name], email: params[:email])
+    @manager = Manager.new(name: params[:name], email: params[:email],job: params[:job],sikaku: params[:sikaku],sonta: params[:sonota],hitokoto: params[:hitokoto])
     # 保存が成功したかどうかで条件分岐をしてください
     if @manager.save
       flash[:notice] = "ユーザー登録が完了しました"
@@ -31,6 +31,10 @@ class ManagersController < ApplicationController
     @manager = Manager.find_by(id: params[:id])
     @manager.name = params[:name]
     @manager.email = params[:email]
+    @manager.job = params[:job]
+    @manager.sikaku = params[:sikaku]
+    @manager.sonota = params[:sonota]
+    @manager.hitokoto = params[:hitokoto]
 
     # 画像を保存する処理を追加してください
     if params[:image]
