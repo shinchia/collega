@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_05_164608) do
+ActiveRecord::Schema.define(version: 2019_01_06_043056) do
 
   create_table "blogs", force: :cascade do |t|
     t.text "content"
@@ -30,6 +30,22 @@ ActiveRecord::Schema.define(version: 2019_01_05_164608) do
     t.string "image_name"
   end
 
+  create_table "managers", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_name"
+  end
+
+  create_table "menbers", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_name"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "name"
     t.text "body"
@@ -37,6 +53,14 @@ ActiveRecord::Schema.define(version: 2019_01_05_164608) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["topic_id"], name: "index_posts_on_topic_id"
+  end
+
+  create_table "teachers", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_name"
   end
 
   create_table "topics", force: :cascade do |t|

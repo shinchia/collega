@@ -1,0 +1,10 @@
+<div class = "video_new">
+  <div class ="edit_zenntai">
+    <h4>ユーザー一覧</h4>
+    <% @users.each do |user| %>
+
+          <h5><%= link_to(user.name, "/users/#{user.id}") %></h5>
+
+    <% end %>
+  </div>
+  </div>

@@ -1,5 +1,29 @@
 Rails.application.routes.draw do
 
+  get "teachers/login" => "teachers#login"
+  post "teachers/:id/update" => "teachers#update"
+  get "teachers/:id/edit" => "teachers#edit"
+  post "teachers/create" => "teachers#create"
+  get "teachers/new" => "teachers#new"
+  get "teachers/index" => "teachers#index"
+  get "teachers/:id" => "teachers#show"
+
+  get "managers/login" => "managers#login"
+  post "managers/:id/update" => "managers#update"
+  get "managers/:id/edit" => "managers#edit"
+  post "managers/create" => "managers#create"
+  get "managers/new" => "managers#new"
+  get "managers/index" => "managers#index"
+  get "managers/:id" => "managers#show"
+
+  get "menbers/login" => "menbers#login"
+  post "menbers/:id/update" => "menbers#update"
+  get "menbers/:id/edit" => "menbers#edit"
+  post "menbers/create" => "menbers#create"
+  get "menbers/new" => "menbers#new"
+  get "menbers/index" => "menbers#index"
+  get "menbers/:id" => "menbers#show"
+
   get "users/login" => "users#login"
   post "users/:id/update" => "users#update"
   get "users/:id/edit" => "users#edit"
