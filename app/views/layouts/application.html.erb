@@ -21,7 +21,9 @@
           <label id="nav-open" for="nav-input"><span></span></label>
           <label class="nav-unshown" id="nav-close" for="nav-input"></label>
           <div id="nav-content">
-            <h4>Menu</h4>
+            <div class ="menu">
+            <h3>Menu</h3>
+          </div>
             <li><a href="/">HOME</a></li>
             <li><%= link_to("Teacher's profile", "/teachers/index") %></li>
             <li><%= link_to("Login", "/users/login") %></li>
@@ -29,12 +31,16 @@
             <li><%= link_to("Post", "/toukous/new") %></li>
             <li><%= link_to("Paid member", "/menbers/login") %></li>
 
-            <h4>講師陣専用メニュー</h4>
-            <li><%= link_to("VIDEO投稿", "/videos/new") %></li>
-            <li><%= link_to("BLOG投稿", "/blogs/new") %></li>
-            <li><%= link_to("IVENT投稿", "/ivents/new") %></li>
+            <div class ="menu">
+            <h3>Teacher's Menu</h3>
+          </div>
+            <li><%= link_to("VIDEO", "/videos/new") %></li>
+            <li><%= link_to("BLOG", "/blogs/new") %></li>
+            <li><%= link_to("IVENT", "/ivents/new") %></li>
 
-            <h4>権限者専用メニュー</h4>
+            <div class ="menu">
+            <h3>Manager's Menu</h3>
+          </div>
             <li><%= link_to("無料会員一覧", "/users/index") %></li>
             <li><%= link_to("有料会員一覧", "/menbers/index") %></li>
 

@@ -21,6 +21,7 @@ body{
   color: #C0F0C0;
   float: left;
   z-index: 5;
+	background: rgba(255,255,255,0);
 
 }
 
@@ -105,15 +106,17 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;/*最前面に*/
-  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
-  max-width: 330px;/*最大幅（調整してください）*/
+  z-index: 9999;
+  width: 90%;
+  max-width: 330px;
   height: 100%;
-  background: #fff;/*背景色*/
-  transition: .3s ease-in-out;/*滑らかに表示*/
+  background: #fff;
+  transition: .3s ease-in-out;
   -webkit-transform: translateX(-105%);
-  transform: translateX(-105%);/*左に隠しておく*/
+  transform: translateX(-105%);
+	background-color: gray;
 }
+
 
 /*チェックが入ったらもろもろ表示*/
 #nav-input:checked ~ #nav-close {
@@ -254,15 +257,15 @@ input[type="radio"]{display:none;}
   margin:0;
    display:inline-block; padding:12px 0;
    color:black;
-   background:#EEEEEE;
+  background: rgba(255,255,255,0);
    text-align:center;
    font-size:13px;
    cursor:pointer;
    transition:ease 0.2s opacity;
    float: left;
    }
-.panel_area{background:#fff;}
-.tab_panel{width:100%; padding:80px 0; display:none;}
+.panel_area{background: rgba(255,255,255,0);}
+.tab_panel{width:100%; padding:80px 0; display:none;background: rgba(255,255,255,0);}
 .tab_panel p{font-size:14px; letter-spacing:1px; text-align:center;}
 .tab_panel h1{
   text-align: center;
@@ -283,15 +286,15 @@ input[type="radio"]{display:none;}
 	padding: 0%;
 }
 
-#tab1:checked ~ .tab_area .tab1_label{background:#fff; color:#FF66FF; font-size: 20px;}
+#tab1:checked ~ .tab_area .tab1_label{background: rgba(255,255,255,0);color:#FF66FF; font-size: 30px;filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));}
 #tab1:checked ~ .panel_area #panel1{display:block;}
-#tab2:checked ~ .tab_area .tab2_label{background:#fff; color:#FF66FF;font-size: 20px;}
+#tab2:checked ~ .tab_area .tab2_label{background: rgba(255,255,255,0);color:#FF66FF;font-size: 30px;filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));}
 #tab2:checked ~ .panel_area #panel2{display:block;}
-#tab3:checked ~ .tab_area .tab3_label{background:#fff; color:#FF66FF;font-size: 20px;}
+#tab3:checked ~ .tab_area .tab3_label{background: rgba(255,255,255,0);color:#FF66FF;font-size: 30px;filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));}
 #tab3:checked ~ .panel_area #panel3{display:block;}
-#tab4:checked ~ .tab_area .tab4_label{background:#fff; color:#FF66FF;font-size: 20px;}
+#tab4:checked ~ .tab_area .tab4_label{background: rgba(255,255,255,0);  color:#FF66FF;font-size: 30px;filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));}
 #tab4:checked ~ .panel_area #panel4{display:block;}
-#tab5:checked ~ .tab_area .tab5_label{background:#fff; color:#FF66FF;font-size: 20px;}
+#tab5:checked ~ .tab_area .tab5_label{background: rgba(255,255,255,0); color:#FF66FF;font-size: 30px;filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));}
 #tab5:checked ~ .panel_area #panel5{display:block;}
 // kakikomi
 
@@ -337,6 +340,12 @@ input[type="radio"]{display:none;}
 
 }
 
+.menu{
+	text-align: center;
+	font-family: 'Great Vibes', cursive;
+	font-size: 30px;
+	color:black;
+}
 
 
 }
