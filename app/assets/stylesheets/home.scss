@@ -21,7 +21,7 @@ body{
   color: #C0F0C0;
   float: left;
   z-index: 5;
-	background: rgba(255,255,255,0);
+	background: rgba(255,255,255,0.8);
 
 }
 
@@ -108,13 +108,13 @@ header {
   left: 0;
   z-index: 9999;
   width: 90%;
-  max-width: 330px;
+  max-width: 70%;
   height: 100%;
   background: #fff;
   transition: .3s ease-in-out;
   -webkit-transform: translateX(-105%);
   transform: translateX(-105%);
-	background-color: gray;
+	background-color: rgba(255,255,255,0.7);
 }
 
 
