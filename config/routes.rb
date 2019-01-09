@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get "login" => "users#login_form"
+ post "login" => "users#login"
+ post "logout" => "users#logout"
+
   get "toukous/new" => "toukous#new"
   post 'toukous/create' => 'toukous#create'
   get 'toukous/:id' => 'toukous#show'
@@ -32,11 +36,10 @@ Rails.application.routes.draw do
   get "menbers/index" => "menbers#index"
   get "menbers/:id" => "menbers#show"
 
-  get "users/login" => "users#login"
   post "users/:id/update" => "users#update"
   get "users/:id/edit" => "users#edit"
   post "users/create" => "users#create"
-  get "users/new" => "users#new"
+  get "signup" => "users#new"
   get "users/index" => "users#index"
   get "users/:id" => "users#show"
 

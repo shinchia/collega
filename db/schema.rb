@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_06_134022) do
+ActiveRecord::Schema.define(version: 2019_01_09_142148) do
 
   create_table "blogs", force: :cascade do |t|
     t.text "content"
@@ -100,6 +100,7 @@ ActiveRecord::Schema.define(version: 2019_01_06_134022) do
     t.string "sikaku"
     t.string "sonota"
     t.string "hitokoto"
+    t.string "password"
   end
 
   create_table "videos", force: :cascade do |t|
