@@ -14,10 +14,18 @@
     <label class="tab5_label" for="tab5">🗣</label>
   </div>
   </div>
+  <% current_user = User.find_by(id: session[:user_id]) %>
+  <% if current_user %>
   <div class="panel_area">
     <div id="panel1" class="tab_panel">
+      <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+      <% end %>
       <div class = "ivent">
       <h3>Ivents</h3>
+
       </div>
       <% @ivents.each do |ivent| %>
       <div class = "toukou">
@@ -43,6 +51,11 @@
       </div>
 
       <div id="panel2" class="tab_panel">
+        <% if flash[:notice] %>
+        <div class="flash">
+          <%= flash[:notice] %>
+        </div>
+        <% end %>
         <div class = "ivent">
         <h3>Blogs</h3>
         </div>
@@ -70,6 +83,11 @@
 
         </div>
         <div id="panel3" class="tab_panel">
+          <% if flash[:notice] %>
+          <div class="flash">
+            <%= flash[:notice] %>
+          </div>
+          <% end %>
           <div class = "ivent">
           <h3>Contacts</h3>
         </div>
@@ -97,6 +115,11 @@
         </div>
       </div>
         <div id="panel4" class="tab_panel">
+          <% if flash[:notice] %>
+          <div class="flash">
+            <%= flash[:notice] %>
+          </div>
+          <% end %>
           <div class = "ivent">
           <h3>Videos</h3>
         </div>
@@ -121,6 +144,11 @@
               <%end%>
           </div>
           <div id="panel5" class="tab_panel">
+            <% if flash[:notice] %>
+            <div class="flash">
+              <%= flash[:notice] %>
+            </div>
+            <% end %>
             <div class = "ivent">
             <h3>Potes</h3>
           </div>
@@ -147,4 +175,15 @@
             </div>
 
     </div>
+    <% else %>
+    <% if flash[:notice] %>
+    <div class="flash_out">
+      <%= flash[:notice] %>
+    </div>
+    <% end %>
+    <div class = "syoki">
+    <h3><%= link_to("ログインをしてください。", "/login") %></h3>
+  </div>
+    <%end%>
+
   </div>

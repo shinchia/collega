@@ -21,15 +21,34 @@
           <label id="nav-open" for="nav-input"><span></span></label>
           <label class="nav-unshown" id="nav-close" for="nav-input"></label>
           <div id="nav-content">
+            <% current_user = User.find_by(id: session[:user_id]) %>
+            <% if current_user %>
+            <div class ="intro">
+            <h5>
+              <%= link_to(current_user.name, "/users/#{current_user.id}") %>さんようこそ！！
+              <img src="/user_images/<%= "#{current_user.id}"%>.jpg">
+            </h5>
+            </div>
             <div class ="menu">
+
             <h3>Menu</h3>
           </div>
             <li><a href="/">HOME</a></li>
             <li><%= link_to("Teacher's profile", "/teachers/index") %></li>
-            <li><%= link_to("Login", "/login") %></li>
-            <li><%= link_to("New Collega", "/signup") %></li>
             <li><%= link_to("Post", "/toukous/new") %></li>
             <li><%= link_to("Paid member", "/menbers/login") %></li>
+            <li><%= link_to("Logout", "/logout", {method: :post}) %></li>
+             <% else %>
+             <div class ="menu">
+
+             <h3>Menu</h3>
+           </div>
+             <li><a href="/">HOME</a></li>
+             <li><%= link_to("Teacher's profile", "/teachers/index") %></li>
+             <li><%= link_to("Login", "/login") %></li>
+             <li><%= link_to("New Collega", "/signup") %></li>
+             <li><%= link_to("Post", "/toukous/new") %></li>
+             <li><%= link_to("Paid member", "/menbers/login") %></li>
 
             <div class ="menu">
             <h3>Teacher's Menu</h3>
@@ -50,14 +69,14 @@
             <li><%= link_to("講師登録", "/teachers/new") %></li>
             <li><%= link_to("権限者登録", "/managers/new") %></li>
 
-
-
+            <% end %>
           </div>
           </div>
           <img src ="/collega.png"></img>
 
 
         </div>
+
     <%= yield %>
   </body>
 </html>

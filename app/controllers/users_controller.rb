@@ -42,7 +42,6 @@ class UsersController < ApplicationController
     @user.sonota = params[:sonota]
     @user.hitokoto = params[:hitokoto]
 
-    # 画像を保存する処理を追加してください
     if params[:image]
       @user.image_name = "#{@user.id}.jpg"
       image = params[:image]
@@ -50,6 +49,7 @@ class UsersController < ApplicationController
     end
 
     if @user.save
+      flash[:notice] = "ユーザー情報を編集しました"
       redirect_to("/users/#{@user.id}")
     else
       render("users/edit")
