@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+
   def top
     @videos = Video.all.order(created_at: :desc)
     @topics = Topic.all.order(created_at: :desc)
@@ -14,6 +15,7 @@ class HomeController < ApplicationController
     redirect_to ("/")
   end
   def show
+    @user = User.find_by(id: params[:id])
     @topic = Topic.find(params[:id])
     @newpost = Post.new(:topic_id => params[:id]) #ここを追加
     @posts = Post.where(topic_id: params[:id])
