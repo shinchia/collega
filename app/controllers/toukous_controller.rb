@@ -1,10 +1,14 @@
 class ToukousController < ApplicationController
+
+
+
   def new
     @toukou = Toukou.new
   end
 
 
   def show
+    @user = User.find_by(id: params[:id])
     @toukou = Toukou.find_by(id: params[:id])
   end
 

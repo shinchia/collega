@@ -1,3 +1,27 @@
 // Place all the styles related to the toukous controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.profile{
+  margin: 20% 0 0 0;
+}
+
+
+.profile img{
+  border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+  width: 60px;
+  height: 60px;
+  float: left;
+  object-fit: cover;
+  margin: 0 0 0 10%;
+}
+
+.profile h3{
+  width: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  color: gray;
+  font-family: "Kokoro", cursive;
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+}

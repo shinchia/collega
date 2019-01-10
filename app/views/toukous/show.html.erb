@@ -1,4 +1,9 @@
-<div class = "video_new">
+
+  <div class = "profile">
+  <img src="<%= "/user_images/#{@user.id}" %>.jpg">
+  <h3><%= link_to(@user.name, "/users/#{@user.id}") %>さんが投稿しました。</h3>
+  </div>
+  <div class = "video_new">
   <p><%= @toukou.content %></p>
   <img src="/toukou_images/<%= "#{@toukou.id}"%>.jpg">
 </div>

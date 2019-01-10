@@ -1,4 +1,6 @@
 class IventsController < ApplicationController
+
+
   def new
     @ivent = Ivent.new
   end
